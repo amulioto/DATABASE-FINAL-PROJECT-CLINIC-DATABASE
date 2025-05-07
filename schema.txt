@@ -1,0 +1,26 @@
+Patients (patient_id PK)
+    └──< Admissions (admission_id PK, patient_id FK, ward_id FK, bed_id FK)
+    └──< Appointments (appointment_id PK, patient_id FK, doctor_id FK)
+    └──< Prescriptions (prescription_id PK, patient_id FK, doctor_id FK)
+    └──< Diagnoses (diagnosis_id PK, patient_id FK, doctor_id FK)
+    └──< TestResults (result_id PK, patient_id FK, doctor_id FK, test_id FK)
+
+Doctors (doctor_id PK, department_id FK)
+    └──< Appointments
+    └──< Prescriptions
+    └──< Diagnoses
+    └──< TestResults
+
+Departments (department_id PK)
+    └──< Doctors
+    └──< Nurses (nurse_id PK, department_id FK)
+
+Wards (ward_id PK)
+    └──< Admissions
+    └──< Beds (bed_id PK, ward_id FK)
+
+Beds
+    └──< Admissions
+
+Tests (test_id PK)
+    └──< TestResults
