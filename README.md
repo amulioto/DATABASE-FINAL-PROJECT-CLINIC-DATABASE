@@ -24,4 +24,5 @@ Ensure you have MySQL Server installed and running.
  - MySQL Workbench
 - MySQL Server
 - Git & GitHub
-
+# erd link
+https://dbdiagram.io/d/681ba1185b2fc4582fa58e65
